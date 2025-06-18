@@ -75,6 +75,7 @@ Content-Type: application/json
 
 **Contoh response:**
 ```json
+201 Created
 { 
   "status": "success", 
   "message": "Cash note created successfully."
@@ -114,6 +115,7 @@ Content-Type: application/json
 
 **Contoh response:**
 ```json
+200 OK
 { 
   "status": "success", 
   "message": "Cash note updated successfully."
