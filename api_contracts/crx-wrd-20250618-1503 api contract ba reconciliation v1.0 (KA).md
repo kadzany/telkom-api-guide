@@ -2,7 +2,7 @@
 
 ### 1. API Overview 
 
-API ini memberikan kapabilitas untuk membuat BA (Berita Acara) Rekoknsiliasi yang digunakan oleh mitra sebagai acuan untuk melakukan rekonsiliasi fee profit sharing yang menjadi haknya.
+API ini memberikan kapabilitas untuk membuat BA (Berita Acara) Rekonsiliasi yang digunakan oleh mitra sebagai acuan untuk melakukan rekonsiliasi fee profit sharing yang menjadi haknya.
 
 BA Rekonsiliasi diakses dari DTP (Digital Touch Point):
 * FABD Product
