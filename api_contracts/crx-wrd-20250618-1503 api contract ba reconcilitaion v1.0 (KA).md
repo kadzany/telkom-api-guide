@@ -32,6 +32,7 @@ Authorization: Token yang didapatkan setelah login harus disertakan dalam header
 **Contoh request:**
 ```http 
 POST /crx/api/v1/cash
+Content-Type: application/json 
 ```
 ```json 
 {
@@ -94,9 +95,9 @@ POST /crx/api/v1/cash
 
 ```http 
 PUT /crx/api/v1/cash/2410280845FR8W9L
+Content-Type: application/json 
 ```
 ```json 
-Content-Type: application/json 
 {
   "action": "verified-transaction",
   "data": {
