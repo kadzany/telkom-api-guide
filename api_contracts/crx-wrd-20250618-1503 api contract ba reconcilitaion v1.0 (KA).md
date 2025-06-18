@@ -35,42 +35,44 @@ POST /crx/api/v1/cash
 ```
 	 
 	
-**Contoh response:** 
+**Contoh request:** 
 ```json 
-"orders":[
-	{ 
-    "ecosystem_code": "QADSZ", 
-    "channel_name": "MYIB", 
-    "payment_status": "paid", 
-    "activation_status": "delivered", 
-    "order_id": "0019d2e7-155b-4db6-b4ab-425318ec1882", 
-    "billing_id": "d3d7ad88-4ea3-4ad7-8f5f-95827e855320", 
-    "invoice_id": "29326c6c-74cc-40ba-aecc-1338818c496e",
-    "payment_id": "2410280845FR8W9L", 
-    "order_created_at": "2024-10-23T20:41:30.872975+07:00", 
-    "subtotal_price": 10000, 
-    "subtotal_ppn": 1100, 
-    "subtotal_discount": 0, 
-    "total": 11100,
-    "order_items": [
-			{
-				"service_id": "302792cf-8dfc-4b60-bb7f-8557b1a1d798",
-				"price": 110,
-				"qty": 1,
-				"discount": 10,
-				"discount_type": "amount", // amount or percentage
-				"total_price": 110,
-				"total_discount": 10,
-				"total_price_after_discount": 100,
-				"dpp": 100,
-				"ppn": 12,
-				"pph": 2,
-				"is_include_ppn": true,
-				"currency": "IDR"
-			}
-		]
-	}
-]
+{
+  "orders": [
+    {
+      "ecosystem_code": "QADSZ",
+      "channel_name": "MYIB",
+      "payment_status": "paid",
+      "activation_status": "delivered",
+      "order_id": "0019d2e7-155b-4db6-b4ab-425318ec1882",
+      "billing_id": "d3d7ad88-4ea3-4ad7-8f5f-95827e855320",
+      "invoice_id": "29326c6c-74cc-40ba-aecc-1338818c496e",
+      "payment_id": "2410280845FR8W9L",
+      "order_created_at": "2024-10-23T20:41:30.872975+07:00",
+      "subtotal_price": 10000,
+      "subtotal_ppn": 1100,
+      "subtotal_discount": 0,
+      "total": 11100,
+      "order_items": [
+          {
+            "service_id": "302792cf-8dfc-4b60-bb7f-8557b1a1d798",
+            "price": 110,
+            "qty": 1,
+            "discount": 10,
+            "discount_type": "amount", // amount or percentage
+            "total_price": 110,
+            "total_discount": 10,
+            "total_price_after_discount": 100,
+            "dpp": 100,
+            "ppn": 12,
+            "pph": 2,
+            "is_include_ppn": true,
+            "currency": "IDR"
+        }
+      ]
+    }
+  ]
+}
 ```
 
 **Endpoint 2:** Update User Profile 
