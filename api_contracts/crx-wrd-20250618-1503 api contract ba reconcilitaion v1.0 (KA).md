@@ -33,9 +33,6 @@ Authorization: Token yang didapatkan setelah login harus disertakan dalam header
 ```http 
 POST /crx/api/v1/cash
 ```
-	 
-	
-**Contoh request:** 
 ```json 
 {
   "orders": [
@@ -75,35 +72,50 @@ POST /crx/api/v1/cash
 }
 ```
 
-**Endpoint 2:** Update User Profile 
+**Contoh response:**
+```json
+{ 
+  "status": "success", 
+  "message": "Cash note created successfully."
+} 
+```
 
-**URL:** `/api/v1/identity/users/{userId} `
+**Endpoint 2:** Update dari Odissey ke CRX
+
+**URL:** `/crx/api/v1/cash/{paymentId} `
  **Method:** `PUT` 
- **Description:** Memperbarui data profil pengguna berdasarkan userId. 
+ **Description:** Memperbarui data cash note berdasarkan paymentId. 
  **Parameters: **
 
-- `userId` (path, required): ID pengguna yang unik. 
+- `paymentId` (path, required): ID payment yang unik. 
 - `Request body` (required): Data yang ingin diperbarui. 
 
 **Contoh request:**
 
 ```http 
-PUT /api/v1/identity/users/123 
-
-Content-Type: application/json 
-{ 
-  "firstName": "Fadlan", 
-  "lastName": "Conglak", 
-  "email": "newemail@example.com" 
-} 
+PUT /crx/api/v1/cash/2410280845FR8W9L
 ```
- 
+```json 
+Content-Type: application/json 
+{
+  "action": "verified-transaction",
+  "data": {
+    "verification_date": 1748399669,
+    "collected_date": 1748278800,
+    "verification_by": "Bisya A****a",
+    "mps_telkom_trx_id": "ff82f5c1-9e5c-498b-af68-0871e1bf9687",
+    "mps_merchant_trx_id": "7594d899-0da8-4e22-af4e-6c13e15e7d14",
+    "mps_channel_trx_id": "2505271814MDZXQW",
+    "nominal_settled": 109890
+  }
+}
+```
 
 **Contoh response:**
-```json 
+```json
 { 
   "status": "success", 
-  "message": "Profile updated successfully." 
+  "message": "Cash note updated successfully."
 } 
 ```
 
