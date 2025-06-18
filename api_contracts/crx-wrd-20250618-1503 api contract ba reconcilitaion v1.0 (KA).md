@@ -9,7 +9,9 @@ BA Rekonsiliasi diakses dari DTP (Digital Touch Point):
 * FABD Core (Order & CRX)
 * Odissey 
 
- 
+
+![Flow data](./flow.png)
+
 
 ### 2. Authentication and Authorization 
 
